@@ -1,0 +1,15 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  min-height: 100vh;
+  width: 100%;
+
+  .dashboard-content {
+    flex: 1;
+    padding: 1rem;
+    background-color: var(--accent);
+    color: var(--accent-foreground);
+  }
+}

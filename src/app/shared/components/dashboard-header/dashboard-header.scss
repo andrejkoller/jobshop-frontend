@@ -1,0 +1,24 @@
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-height);
+  padding: 0 1rem;
+  background-color: var(--header);
+  color: var(--header-foreground);
+  border-bottom: 1px solid var(--border);
+
+  .dashboard-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .dashboard-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+  }
+}
