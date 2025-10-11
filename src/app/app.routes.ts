@@ -7,16 +7,11 @@ export const routes: Routes = [
       import('./shared/components/home/home').then((m) => m.Home),
   },
   {
-    path: 'dashboard/overview',
+    path: 'dashboard',
     loadComponent: () =>
       import('./shared/components/dashboard/dashboard').then(
         (m) => m.Dashboard
       ),
-  },
-  {
-    path: 'dashboard',
-    redirectTo: 'dashboard/overview',
-    pathMatch: 'full',
   },
   {
     path: '**',

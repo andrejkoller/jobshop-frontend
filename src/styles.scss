@@ -21,8 +21,8 @@ body {
 }
 
 :root {
-  --header-height: 3.5rem;
-  --sidebar-width: 4.5rem;
+  --header-height: 4rem;
+  --sidebar-width: 6rem;
   --background: #ffffff;
   --foreground: #000000;
   --header: #ffffff;
@@ -30,12 +30,10 @@ body {
   --sidebar: #ffffff;
   --sidebar-foreground: #000000;
   --border: #ededed;
-  --primary: #3a8aff;
+  --primary: #2d67e3;
   --primary-foreground: #ffffff;
   --accent: #f2f7fa;
   --accent-foreground: #000000;
-  --muted: #888888;
-  --muted-foreground: #ffffff;
 }
 
 body {
@@ -46,4 +44,10 @@ body {
   font-size: 16px;
   background-color: var(--background);
   color: var(--foreground);
+}
+
+svg.lucide {
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: middle;
 }

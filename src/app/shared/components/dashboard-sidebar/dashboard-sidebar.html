@@ -1,0 +1,13 @@
+<div class="dashboard-sidebar">
+  <ul class="sidebar-menu">
+    @for (item of menuItems; track $index) {
+    <li class="sidebar-item">
+      <a class="sidebar-link" [routerLink]="item.route">
+        <span class="icon">
+          <i-lucide [name]="item.icon"></i-lucide>
+        </span>
+      </a>
+    </li>
+    }
+  </ul>
+</div>
