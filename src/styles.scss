@@ -1,5 +1,61 @@
 @use "@angular/material" as mat;
 
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter_18pt-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter_18pt-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter_18pt-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter_18pt-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter_18pt-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter_18pt-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter_18pt-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 html {
   @include mat.theme(
     (
@@ -23,16 +79,22 @@ body {
 :root {
   --header-height: 4rem;
   --sidebar-width: 6rem;
+
   --background: #ffffff;
   --foreground: #000000;
+
   --header: #ffffff;
   --header-foreground: #000000;
+
   --sidebar: #ffffff;
   --sidebar-foreground: #000000;
-  --border: #ededed;
+
+  --border: #f0f0f0;
+
   --primary: #2d67e3;
   --primary-foreground: #ffffff;
-  --accent: #f2f7fa;
+
+  --accent: #f0f0f0;
   --accent-foreground: #000000;
 }
 
@@ -40,7 +102,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   font-size: 16px;
   background-color: var(--background);
   color: var(--foreground);

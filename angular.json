@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "patientviewer-frontend": {
+    "jobshop-frontend": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -63,10 +63,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "patientviewer-frontend:build:production"
+              "buildTarget": "jobshop-frontend:build:production"
             },
             "development": {
-              "buildTarget": "patientviewer-frontend:build:development"
+              "buildTarget": "jobshop-frontend:build:development"
             }
           },
           "defaultConfiguration": "development"

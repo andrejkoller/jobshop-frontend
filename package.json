@@ -1,5 +1,5 @@
 {
-  "name": "patientviewer-frontend",
+  "name": "jobshop-frontend",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:patientviewer-frontend": "node dist/patientviewer-frontend/server/server.mjs"
+    "serve:ssr:jobshop-frontend": "node dist/jobshop-frontend/server/server.mjs"
   },
   "prettier": {
     "overrides": [
