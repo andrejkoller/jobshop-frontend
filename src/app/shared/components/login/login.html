@@ -1,0 +1,31 @@
+<div class="login">
+  <a class="logo" routerLink="/">{{ title }}</a>
+  <form class="form">
+    <h2 class="form-title">Login to your account</h2>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        placeholder="name@domain.com"
+        id="email"
+        name="email"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        placeholder="Enter your password"
+        id="password"
+        name="password"
+        required
+      />
+    </div>
+    <button class="form-button" type="submit">Login</button>
+  </form>
+  <p class="form-text">
+    Don't have an account?
+    <a class="form-link" routerLink="/signup">Sign Up</a>
+  </p>
+</div>

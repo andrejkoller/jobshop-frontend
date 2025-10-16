@@ -1,0 +1,105 @@
+:root {
+  --primary-alpha: rgba(
+    45,
+    103,
+    227,
+    0.3
+  ); // You can adjust this if your --primary color changes
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+    min-height: 84px;
+    width: 100%;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 512px;
+    margin: 40px auto 0 auto;
+
+    .form-title {
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      color: inherit;
+      text-align: center;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      margin-bottom: 1rem;
+      width: 100%;
+
+      label {
+        font-size: 0.875rem;
+        font-weight: 400;
+      }
+
+      input {
+        height: 2.25rem;
+        border: 1px solid var(--input-border);
+        border-radius: 0.5rem;
+        width: 100%;
+        padding: 0 2rem 0 0.75rem;
+        box-sizing: border-box;
+
+        &:focus {
+          outline: none;
+          border-color: var(--primary);
+          box-shadow: 0 0 0 2px var(--primary-alpha, rgba(45, 103, 227, 0.3));
+        }
+      }
+    }
+
+    .form-button {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-align: center;
+      text-decoration: none;
+      color: var(--primary-foreground);
+      background-color: var(--primary);
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 1rem;
+      height: 2.5rem;
+    }
+  }
+
+  .form-text {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: inherit;
+
+    .form-link {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
