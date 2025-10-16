@@ -78,7 +78,8 @@ body {
 
 :root {
   --header-height: 4rem;
-  --sidebar-width: 6rem;
+  --sidebar-width: 15rem;
+  --sidebar-collapsed-width: 2.5rem;
 
   --background: #ffffff;
   --foreground: #000000;
@@ -86,7 +87,7 @@ body {
   --header: #ffffff;
   --header-foreground: #000000;
 
-  --sidebar: #ffffff;
+  --sidebar: #f0f0f0;
   --sidebar-foreground: #000000;
 
   --border: #f0f0f0;
@@ -97,6 +98,9 @@ body {
 
   --accent: #f0f0f0;
   --accent-foreground: #000000;
+
+  --icon: #e3e3e6;
+  --icon-foreground: #3f3f46;
 }
 
 body {
@@ -110,7 +114,7 @@ body {
 }
 
 svg.lucide {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   vertical-align: middle;
 }

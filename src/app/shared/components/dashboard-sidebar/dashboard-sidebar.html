@@ -1,13 +1,47 @@
-<div class="dashboard-sidebar">
-  <ul class="sidebar-menu">
-    @for (item of menuItems; track $index) {
-    <li class="sidebar-item">
-      <a class="sidebar-link" [routerLink]="item.route">
-        <span class="icon">
-          <i-lucide [name]="item.icon"></i-lucide>
-        </span>
-      </a>
-    </li>
+<div class="dashboard-sidebar" [class.collapsed]="isCollapsed()">
+  <div class="logo-wrapper">
+    @if (!isCollapsed()) {
+    <a class="logo" routerLink="/dashboard">{{ title }}</a>
+    <button
+      class="sidebar-trigger-button"
+      aria-label="Toggle Menu"
+      (click)="toggleSidebar()"
+    >
+      <i-lucide class="menu-icon" [name]="PanelRightOpenIcon"></i-lucide>
+    </button>
+    } @else {
+    <div class="logo-collapsed-container">
+      <a class="logo-collapsed" routerLink="/dashboard">{{ titleShort }}</a>
+      <button
+        class="sidebar-trigger-button-hover"
+        aria-label="Expand Menu"
+        (click)="toggleSidebar()"
+      >
+        <i-lucide class="menu-icon" [name]="Columns2Icon"></i-lucide>
+      </button>
+    </div>
     }
-  </ul>
+  </div>
+
+  <div class="dashboard-wrapper">
+    <p class="sidebar-title">Menu</p>
+    <ul class="sidebar-menu">
+      @for (item of menuItems; track $index) {
+      <li class="sidebar-item">
+        <a
+          class="sidebar-link"
+          [routerLink]="item.route"
+          routerLinkActive="active"
+        >
+          <span class="icon">
+            <i-lucide [name]="item.icon"></i-lucide>
+          </span>
+          <span class="label" [class.hidden]="isCollapsed()">{{
+            item.label
+          }}</span>
+        </a>
+      </li>
+      }
+    </ul>
+  </div>
 </div>

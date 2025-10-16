@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, OnInit, signal } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import {
   LucideAngularModule,
-  LayoutDashboard,
-  Calendar,
-  Settings,
-  Users,
+  CircleUserRoundIcon,
+  HomeIcon,
+  MailOpenIcon,
+  SettingsIcon,
+  PanelRightOpenIcon,
+  Columns2Icon,
 } from 'lucide-angular';
 
 interface MenuItem {
@@ -17,19 +19,50 @@ interface MenuItem {
 @Component({
   selector: 'app-dashboard-sidebar',
   standalone: true,
-  imports: [LucideAngularModule, RouterLink],
+  imports: [LucideAngularModule, RouterLink, RouterLinkActive],
   templateUrl: './dashboard-sidebar.html',
   styleUrls: ['./dashboard-sidebar.scss'],
 })
-export class DashboardSidebar {
+export class DashboardSidebar implements OnInit {
+  protected readonly title: string = 'jobshop';
+  protected readonly titleShort: string = 'js';
+  protected readonly PanelRightOpenIcon = PanelRightOpenIcon;
+  protected readonly Columns2Icon = Columns2Icon;
+
+  isCollapsed = signal(false);
+
   menuItems: MenuItem[] = [
-    { label: 'Dashboard', icon: LayoutDashboard, route: '/dashboard' },
-    { label: 'Patients', icon: Users, route: '/dashboard/patients' },
+    { label: 'Home', icon: HomeIcon, route: '/dashboard' },
     {
-      label: 'Appointments',
-      icon: Calendar,
-      route: '/dashboard/appointments',
+      label: 'Applications',
+      icon: MailOpenIcon,
+      route: '/dashboard/applications',
     },
-    { label: 'Settings', icon: Settings, route: '/dashboard/settings' },
+    {
+      label: 'Profile',
+      icon: CircleUserRoundIcon,
+      route: '/dashboard/profile',
+    },
+    { label: 'Settings', icon: SettingsIcon, route: '/dashboard/settings' },
   ];
+
+  ngOnInit() {
+    if (typeof window !== 'undefined' && window.localStorage) {
+      const savedState = localStorage.getItem('sidebar-collapsed');
+      if (savedState === 'true') {
+        this.isCollapsed.set(true);
+      }
+    }
+  }
+
+  toggleSidebar() {
+    const newState = !this.isCollapsed();
+    this.isCollapsed.set(newState);
+
+    if (newState) {
+      localStorage.setItem('sidebar-collapsed', 'true');
+    } else {
+      localStorage.removeItem('sidebar-collapsed');
+    }
+  }
 }
