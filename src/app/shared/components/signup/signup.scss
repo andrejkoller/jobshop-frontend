@@ -116,21 +116,21 @@
         background-color: var(--primary-hover);
       }
     }
+  }
 
-    .form-text {
-      margin-top: 1rem;
-      font-size: 0.875rem;
-      color: inherit;
+  .form-text {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: inherit;
 
-      .form-link {
-        color: var(--primary);
-        text-decoration: none;
-        font-weight: 500;
-        cursor: pointer;
+    .form-link {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
 
-        &:hover {
-          text-decoration: underline;
-        }
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
