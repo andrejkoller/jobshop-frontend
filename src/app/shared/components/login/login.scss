@@ -14,7 +14,7 @@
     text-decoration: none;
     color: inherit;
     min-height: 84px;
-    width: 100%;
+    width: fit-content;
   }
 
   .form {
@@ -97,5 +97,11 @@
         text-decoration: underline;
       }
     }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .login .form {
+    min-width: 90%;
   }
 }

@@ -97,5 +97,47 @@
         }
       }
     }
+
+    .mobile-nav {
+      display: flex;
+
+      .mobile-menu-button {
+        background: none;
+        border: none;
+        border-radius: 0.75rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        background-color: var(--foreground);
+        color: var(--background);
+
+        .menu-icon {
+          width: 1.5rem;
+          height: 1.5rem;
+          color: inherit;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .header .wrapper {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 856px) {
+  .header .wrapper .link-container {
+    display: none;
+  }
+
+  .header .wrapper .nav .nav-list {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 857px) {
+  .header .wrapper .mobile-nav {
+    display: none;
   }
 }

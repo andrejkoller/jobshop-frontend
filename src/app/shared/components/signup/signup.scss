@@ -14,7 +14,7 @@
     text-decoration: none;
     color: inherit;
     min-height: 84px;
-    width: 100%;
+    width: fit-content;
   }
 
   .form {
@@ -132,6 +132,17 @@
       &:hover {
         text-decoration: underline;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .signup .form {
+    min-width: 90%;
+
+    .form-wrapper {
+      flex-direction: column;
+      gap: unset;
     }
   }
 }
