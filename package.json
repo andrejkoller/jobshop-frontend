@@ -32,7 +32,7 @@
     "@angular/router": "^20.1.0",
     "@angular/ssr": "^20.3.18",
     "express": "^5.1.0",
-    "lucide-angular": "^0.545.0",
+    "lucide-angular": "^0.576.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
